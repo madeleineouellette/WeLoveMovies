@@ -1,15 +1,16 @@
 const knex = require("../db/connection");
 
+//GET reviews/:reviewId
 function read(reviewId) {
   return knex("reviews").select().where({ review_id: reviewId }).first()
 }
 
-
+//DELETE reviews/:reviewId
 function destroy(reviewId) {
     return knex("reviews").where({ review_id: reviewId }).del();
   }
 
-
+//PUT reviews/:reviewId
 function update(reviewId, updatedReview){
    return knex("reviews")
      .select("*")
@@ -17,6 +18,7 @@ function update(reviewId, updatedReview){
      .update(updatedReview, "*")
 }
 
+//function to add critic object to updated reviews
 function showUpdatedReview(reviewId){
   return knex("reviews as r")
     .join("critics as c", "c.critic_id", "r.critic_id")

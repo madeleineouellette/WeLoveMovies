@@ -12,7 +12,7 @@ const reduceMovies = reduceProperties("theater_id", {
     theater_id: ["theaters", null, "theater_id"]
   });
 
-
+//GET /theaters
 function list() {
     return knex("theaters as t")
         .join("movies_theaters as mt", "mt.theater_id", "t.theater_id")
