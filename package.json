@@ -1,6 +1,9 @@
 {
   "name": "project-movie-back-end",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.13.0"
+  },
   "description": "zid-be-project-movie-01-qualified",
   "main": "src/app.js",
   "scripts": {
@@ -17,9 +20,7 @@
     "start:solution": "docker-compose up --build",
     "test": "jest",
     "test:solution": "docker-compose build && docker-compose run --rm api npm test && docker-compose down",
-    "start": "node server",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client"
+    "start": "node src/server"
   },
   "keywords": [],
   "author": "",
