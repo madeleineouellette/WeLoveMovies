@@ -14,7 +14,7 @@ app.use("/reviews", reviewsRouter);
 app.use("/theaters", theatersRouter);
 
 app.get('/', (req, res) => {
-  res.send('Welcome to my WeLoveMovies <br>')
+  res.send('<h1>Welcome to my WeLoveMovies</h1> <br> <h3>please go to the following endpoints:</h3><p>/movies</p>/movies/:movieId</p><p>/movies/:movieId/reviews</p><p>/movies/:movieId/theaters</p>/:reviewId</p><p>/theaters<p>')
 })
 
 // Not found handler
