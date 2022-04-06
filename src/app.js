@@ -13,6 +13,9 @@ app.use("/movies", moviesRouter);
 app.use("/reviews", reviewsRouter);
 app.use("/theaters", theatersRouter);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to my WeLoveMovies <br>')
+})
 
 // Not found handler
 app.use((req, res, next) => {
